@@ -2,32 +2,35 @@
 
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 html, body {
-  background-color: #191919;
+  /* background: radial-gradient(circle, rgb(79 79 79) 0%, rgb(28 28 28) 100%); */
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
-body {
-  background: url('../assets/img/background.jpg');
-  background-position: top center;
-  background-repeat: no-repeat;
+html {
+  background: url('../assets/img/killbabylonsound-lapoint-2019.jpg');
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+body {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  display: flex;
+	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
-	align-items: stretch;
-  align-content: stretch;
+	align-items: center;
+	align-content: center;
+  background: radial-gradient(ellipse closest-side,rgba(0,0,0,.4) 50%,transparent 100%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
-header {
-  position: relative;
-  padding: 1rem 1rem 3rem;
+main {
+  margin-top: 12rem;
+}
+.logo h1 {
   font-family: 'Fjalla One', sans-serif;
-  margin: 8rem 0 1rem;
-}
-h1 {
   font-size: 4rem;
   padding: 0;
   margin: 0;
@@ -37,21 +40,24 @@ h1 {
   text-transform: uppercase;
   padding: 0.5rem 1.5rem;
   letter-spacing: 3px;
-  font-weight: 400;
+  font-weight: 600;
   vertical-align: middle;
   position: relative;
+  cursor: default;
 }
-header p {
+.logo p {
+  font-family: 'Fjalla One', sans-serif;
   background: #fff;
   display: inline-block;
   padding: 0.5rem 1rem;
   font-weight: 600;
   margin: 0rem;
   position: relative;
+  cursor: default;
 }
-header img {
+.logo img {
   position: absolute;
-  top: -5rem;
+  top: -6rem;
   margin: auto;
   text-align: center;
   left: calc(50% - 245px);
@@ -60,113 +66,68 @@ header img {
   width: 100%;
   min-width: 400px;
   max-width: 300px;
+  cursor: default;
 }
-section {
-  text-align: center;
-  height: 100%;
-}
-footer, footer a {
-  color: #fff;
-  margin: 2rem 0 2rem;
-}
-
-/* Mixtape skeleton */
-ul {
-  margin: 0rem;
-  padding: 2rem 2rem 0;
-  width: 100%;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: visible;
-  list-style: none;
-  box-sizing: border-box;
-}
-.flexItem {
-  cursor: pointer;
-  min-width: 300px;    
-}
-
-
-/* Mixtape Items */
-li {
+.logo {
   position: relative;
-  margin: 0 1rem;
+  margin: auto;
+  text-align: center;
+  max-width: 850px;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+  
 }
-li:hover figcaption {
-  display: flex;  
+
+ul img {
+  max-width: 84px;
 }
-figure {
-  margin: 0;
+
+ul {
+  list-style: none;
+  margin: 6rem 0 0;
   padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
-figcaption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
+
+li {
+  margin: 0.5rem;
+  padding: 0;
+  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-  height: 100%;
-  width: 100%;
-  background: rgb(25 25 25 / 85%);
-  color: #fff;
-  padding: 1rem;
-  box-sizing: border-box;
-  transition: all 500ms ease-in-out;
-  cursor: default;
+  align-items: center;
+  align-content: center;
 }
-figcaption .title {
-  font-size: 1.8rem;
-  margin: 0 0rem;
-  padding: 0;
-}
-figcaption .desc {
-  font-size: 1rem;
-  margin: 0 0rem;
-  padding: 0 0.5rem;
-}
-figcaption .btns {
-  margin: 1rem 0 1rem;
-}
-picture img {
-  width: 100%;
-  max-width: 300px;
-  border: solid 5px #191919;
-  box-sizing: border-box;
-}
-figcaption button {
-  border: none;
-  background: #ffffff;
-  color: #191919;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-}
-a button, 
-a:visited button, 
-a:hover button, 
-a:focus button{
-  text-decoration: none;
-  color: #191919;
+
+li img {
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+li img:hover {
+  transform: scale(1.2);
 }
 
 @media screen and (max-width: 640px) {
-  h1 {
+  .logo h1 {
     font-size: 1.4rem;
   }
-  header p {
+  .logo p {
     font-size: 0.6rem;
   }
-  header img {
-    max-width: 200px;
-    min-width: 200px;
-    top: -2rem;
-    left: calc(50% - 120px);
-  }
-  header {
-    margin: 6rem 0 0rem;
+  .logo img {
+    max-width: 250px;
+    min-width: 250px;
+    top: -4rem;
+    left: calc(50% - 150px);
   }
 }
